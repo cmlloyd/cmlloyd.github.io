@@ -9,7 +9,7 @@ Over several lines.
 
 Including images:
 
-![Alt text](http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=3c6263c3453b)
+![Alt text goes here](http://jekyllrb.com/img/logo-2x.png)
 
 And links:
 
@@ -26,6 +26,8 @@ And blockquotes:
 
 And code:
 
+## Ruby
+
 {% highlight ruby %}
 def show 
   @widget = Widget(params[:id]) 
@@ -36,4 +38,23 @@ def show
 end
 {% endhighlight %}
 
+## Objective-C
+
+{% highlight objective-c %}
+#pragma mark - Singleton Initialisation
+
++ (instancetype)sharedInstance {
+	
+	static LODataManager *_sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedInstance = [[LODataManager alloc] init];
+    });
+	
+    return _sharedInstance;
+	
+}
+{% endhighlight %}
+
 So there we have it...
+
