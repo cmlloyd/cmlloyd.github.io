@@ -28,7 +28,7 @@ And code:
 
 ## Ruby
 
-{% highlight ruby lineno %}
+{% highlight ruby %}
 def show
     @widget = Widget(params[:id])
     respond_to do |format|
