@@ -29,31 +29,31 @@ And code:
 ## Ruby
 
 {% highlight ruby %}
-    def show 
-      @widget = Widget(params[:id]) 
-      respond_to do |format| 
-        format.html # show.html.erb 
-        format.json { render json: @widget } 
-      end 
+def show
+    @widget = Widget(params[:id])
+    respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @widget }
     end
+end
 {% endhighlight %}
 
 ## Objective-C
 
 {% highlight objective-c %}
-    #pragma mark - Singleton Initialisation
+#pragma mark - Singleton Initialisation
 
-    + (instancetype)sharedInstance {
++ (instancetype)sharedInstance {
+
+    static LODataManager *_sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _sharedInstance = [[LODataManager alloc] init];
+    });
+
+    return _sharedInstance;
 	
-        static LODataManager *_sharedInstance = nil;
-        static dispatch_once_t onceToken;
-        dispatch_once(&onceToken, ^{
-            _sharedInstance = [[LODataManager alloc] init];
-        });
-	
-        return _sharedInstance;
-	
-    }
+}
 {% endhighlight %}
 
 So there we have it...
